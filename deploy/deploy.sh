@@ -15,7 +15,7 @@ HOST="${HOST:-root@161.97.75.64}"
 BASE=/opt/mailcow-dockerized/data/conf/nginx
 NAME=hakim-games
 NGINX=mailcowdockerized-nginx-mailcow-1
-SITE_FILES=(index.html favicon.png og.jpg robots.txt sitemap.xml icons fonts)
+SITE_FILES=(index.html googlec226a5b67b2017f9.html favicon.png og.jpg robots.txt sitemap.xml icons fonts)
 
 cd "$(dirname "$0")/.."
 
