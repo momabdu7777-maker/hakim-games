@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ألعاب حكيم — ألعاب عربية مجانية</title>
+<meta name="description" content="كل ألعاب حكيم في مكان واحد: صياد البحر العربي، دومينو حكيم، حكيم لتعلّم الإنجليزية، وحكيم للأسئلة والألغاز. حمّلها مجاناً لأندرويد أو العبها من المتصفح.">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icons/site.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="ألعاب حكيم — ألعاب عربية مجانية">
+<meta property="og:description" content="4 ألعاب عربية مجانية لأندرويد والمتصفح. حمّلها أو العبها الآن.">
+<meta property="og:image" content="https://momabdu7777-maker.github.io/icons/site.png">
+<style>
+@font-face{font-family:Tajawal;src:url(fonts/Tajawal-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:Tajawal;src:url(fonts/Tajawal-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:Tajawal;src:url(fonts/Tajawal-ExtraBold.ttf) format("truetype");font-weight:800;font-display:swap}
+
+:root{
+  --bg:#0b1020; --bg-2:#111832; --line:rgba(255,255,255,.09);
+  --text:#f3f1ea; --muted:#a8adbf; --gold:#f2c14e; --gold-2:#e0962b;
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:Tajawal,"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif;
+  color:var(--text); line-height:1.7; min-height:100vh;
+  background:
+    radial-gradient(ellipse 70% 420px at 85% -60px,rgba(46,196,214,.20),transparent 70%),
+    radial-gradient(ellipse 70% 420px at 10% -60px,rgba(124,58,237,.22),transparent 70%),
+    var(--bg);
+}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+
+/* ---------- header ---------- */
+header{padding:56px 0 30px;text-align:center}
+.logo{
+  width:96px;height:96px;margin:0 auto 18px;display:grid;
+  grid-template-columns:1fr 1fr;gap:5px;transform:rotate(-6deg);
+}
+.logo img{width:100%;height:100%;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+h1{font-size:clamp(2.1rem,7vw,3.3rem);font-weight:800;line-height:1.2;letter-spacing:-.01em}
+h1 span{background:linear-gradient(90deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:clamp(1.02rem,3.2vw,1.2rem);margin:12px auto 0;max-width:34em}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.pill{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:99px;padding:5px 14px;font-size:.92rem;color:#d9dbe6}
+.pill b{color:var(--gold)}
+
+/* ---------- games ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:20px;padding:18px 0 10px}
+.game{
+  --a:#fff; --b:#888; --c:#222;
+  position:relative;overflow:hidden;border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:
+    radial-gradient(ellipse 120% 90% at 100% 0,color-mix(in srgb,var(--a) 34%,transparent),transparent 62%),
+    linear-gradient(160deg,var(--c),var(--bg-2));
+  padding:22px;display:flex;flex-direction:column;gap:14px;
+  transition:transform .2s ease,border-color .2s ease;
+}
+.game:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--a) 55%,transparent)}
+.top{display:flex;gap:16px;align-items:center}
+.top img{width:88px;height:88px;border-radius:20px;flex:none;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.kind{display:inline-block;font-size:.8rem;font-weight:700;color:var(--b);letter-spacing:.02em}
+.game h2{font-size:1.5rem;font-weight:800;line-height:1.25}
+.game h2 small{font-size:.95rem;font-weight:700;color:var(--muted)}
+.badge{
+  position:absolute;top:16px;left:16px;font-size:.78rem;font-weight:800;
+  background:var(--gold);color:#2a1a00;border-radius:99px;padding:2px 12px;
+}
+.game p{color:#d6d8e2}
+.facts{display:flex;flex-wrap:wrap;gap:6px;list-style:none}
+.facts li{font-size:.85rem;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:10px;padding:2px 10px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:4px}
+.btn{
+  flex:1 1 170px;display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:50px;padding:8px 16px;border-radius:14px;text-decoration:none;
+  font-weight:800;font-size:1.02rem;transition:filter .15s ease,transform .15s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn-dl{background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#241500;box-shadow:0 6px 18px rgba(242,193,78,.25)}
+.btn-dl:hover{filter:brightness(1.07)}
+.btn-play{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18)}
+.btn-play:hover{background:rgba(255,255,255,.13)}
+.btn svg{width:20px;height:20px;flex:none}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:.84rem;color:var(--muted)}
+.meta a{color:var(--b);font-weight:700;text-decoration:none}
+.meta a:hover{text-decoration:underline}
+
+.sea{--a:#2EC4D6;--b:#7fe3ee;--c:#0a2c50}
+.domino{--a:#1f7a52;--b:#f2c14e;--c:#0b3325}
+.hakeem{--a:#a855f7;--b:#f9a8d4;--c:#251a55}
+.hakim{--a:#d9a441;--b:#f3c86a;--c:#14223a}
+
+/* ---------- install ---------- */
+section.info{margin:34px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px}
+.box{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:var(--radius);padding:22px}
+.box h3{font-size:1.2rem;font-weight:800;margin-bottom:12px}
+.box ol{padding-inline-start:0;list-style:none;counter-reset:s;display:grid;gap:10px}
+.box ol li{counter-increment:s;display:flex;gap:10px;color:#d6d8e2}
+.box ol li::before{
+  content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;font-weight:800;font-size:.9rem;
+  background:rgba(242,193,78,.15);color:var(--gold);
+}
+.box ul{list-style:none;display:grid;gap:9px;color:#d6d8e2}
+b.k{color:var(--text)}
+
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:40px 0 calc(32px + env(safe-area-inset-bottom))}
+
+@media (max-width:420px){
+  header{padding-top:40px}
+  .top img{width:72px;height:72px;border-radius:17px}
+  .game{padding:18px}
+  .game h2{font-size:1.32rem}
+  .badge{top:12px;left:12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo" aria-hidden="true">
+    <img src="icons/sea-hunter.webp" alt=""><img src="icons/domino.webp" alt="">
+    <img src="icons/hakeem.webp" alt=""><img src="icons/hakim.webp" alt="">
+  </div>
+  <h1>ألعاب <span>حكيم</span></h1>
+  <p class="lead">ألعاب عربية مجانية للجوال: حمّل أي لعبة لأندرويد بضغطة واحدة، أو العبها مباشرة من المتصفح بلا تثبيت.</p>
+  <div class="pills">
+    <span class="pill"><b>4</b> ألعاب</span>
+    <span class="pill">مجانية بالكامل</span>
+    <span class="pill">بالعربية</span>
+    <span class="pill">لا تجمع أي بيانات</span>
+  </div>
+</header>
+
+<main class="grid">
+
+  <!-- ===== صياد البحر العربي ===== -->
+  <article class="game sea">
+    <span class="badge">جديدة</span>
+    <div class="top">
+      <img src="icons/sea-hunter.webp" alt="أيقونة صياد البحر العربي" width="88" height="88">
+      <div>
+        <span class="kind">صيد · أركيد</span>
+        <h2>صياد البحر العربي</h2>
+      </div>
+    </div>
+    <p>ارمِ صنارتك من ساحل المكلا إلى الأعماق، تفادَ قناديل البحر، والتقط أسماكك وأنت صاعد… وإذا علق قرش، فاستعد للصراع!</p>
+    <ul class="facts"><li>13 نوعاً من الأسماك</li><li>صراع الأسماك الكبيرة</li><li>بدون إنترنت</li></ul>
+    <div class="actions">
+      <a class="btn btn-dl" href="https://momabdu7777-maker.github.io/sea-game/sea-hunter.apk" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>تحميل لأندرويد</a>
+      <a class="btn btn-play" href="https://momabdu7777-maker.github.io/sea-game/play/"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>العب من المتصفح</a>
+    </div>
+    <div class="meta"><span>الإصدار 1.1 · 47 ميغابايت · أندرويد 7+</span><a href="https://momabdu7777-maker.github.io/sea-game/">صفحة اللعبة ←</a></div>
+  </article>
+
+  <!-- ===== دومينو حكيم ===== -->
+  <article class="game domino">
+    <div class="top">
+      <img src="icons/domino.webp" alt="أيقونة دومينو حكيم" width="88" height="88">
+      <div>
+        <span class="kind">طاولة · ألغاز</span>
+        <h2>دومينو حكيم <small>الطاولة الملكية</small></h2>
+      </div>
+    </div>
+    <p>نافس الكمبيوتر أو العب مع شريك ضد خصمين، ومعها لعبة «تركيب» بثلاثمئة مرحلة. لعبتان في تطبيق واحد.</p>
+    <ul class="facts"><li>3 مستويات صعوبة</li><li>فريقين 2 ضد 2</li><li>300 مرحلة تركيب</li></ul>
+    <div class="actions">
+      <a class="btn btn-dl" href="https://momabdu7777-maker.github.io/hakim-domino/domino.apk" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>تحميل لأندرويد</a>
+      <a class="btn btn-play" href="https://momabdu7777-maker.github.io/hakim-domino/play/"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>العب من المتصفح</a>
+    </div>
+    <div class="meta"><span>الإصدار 1.2 · 0.5 ميغابايت · أندرويد 7+</span><a href="https://momabdu7777-maker.github.io/hakim-domino/">صفحة اللعبة ←</a></div>
+  </article>
+
+  <!-- ===== حكيم | Hakeem ===== -->
+  <article class="game hakeem">
+    <div class="top">
+      <img src="icons/hakeem.webp" alt="أيقونة حكيم لتعلّم الإنجليزية" width="88" height="88">
+      <div>
+        <span class="kind">تعليمية · لكل العائلة</span>
+        <h2>حكيم <small>| Hakeem</small></h2>
+      </div>
+    </div>
+    <p>مغامرة ممتعة لتعلّم الإنجليزية بالصوت والصورة واللعب مع صديقك حكيم، للأطفال والمراهقين والكبار.</p>
+    <ul class="facts"><li>516 كلمة وعبارة</li><li>قصص وأناشيد وكرتون</li><li>4 فئات عمرية</li></ul>
+    <div class="actions">
+      <a class="btn btn-dl" href="https://momabdu7777-maker.github.io/hakim-learning/hakeem.apk" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>تحميل لأندرويد</a>
+      <a class="btn btn-play" href="https://momabdu7777-maker.github.io/hakim-learning/play/"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>العب من المتصفح</a>
+    </div>
+    <div class="meta"><span>الإصدار 1.8.2 · 0.7 ميغابايت · أندرويد 7+</span><a href="https://momabdu7777-maker.github.io/hakim-learning/">صفحة اللعبة ←</a></div>
+  </article>
+
+  <!-- ===== حكيم: أسئلة وألغاز ===== -->
+  <article class="game hakim">
+    <div class="top">
+      <img src="icons/hakim.webp" alt="أيقونة حكيم للأسئلة والألغاز" width="88" height="88">
+      <div>
+        <span class="kind">أسئلة · ألغاز</span>
+        <h2>حكيم <small>أسئلة وألغاز</small></h2>
+      </div>
+    </div>
+    <p>لعبة أسئلة وألغاز عربية، ارتقِ فيها من مبتدئ حتى رتبة الحكيم.</p>
+    <ul class="facts"><li>240 سؤالاً</li><li>6 مجالس</li><li>4 مستويات</li></ul>
+    <div class="actions">
+      <a class="btn btn-dl" href="https://momabdu7777-maker.github.io/hakim/hakim.apk" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>تحميل لأندرويد</a>
+      <a class="btn btn-play" href="https://momabdu7777-maker.github.io/hakim/play/"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>العب من المتصفح</a>
+    </div>
+    <div class="meta"><span>الإصدار 1.2 · 0.8 ميغابايت · أندرويد 7+</span><a href="https://momabdu7777-maker.github.io/hakim/">صفحة اللعبة ←</a></div>
+  </article>
+
+</main>
+
+<section class="info">
+  <div class="box">
+    <h3>طريقة التثبيت على أندرويد</h3>
+    <ol>
+      <li><span>اضغط <b class="k">«تحميل لأندرويد»</b> تحت اللعبة وانتظر حتى ينتهي التحميل.</span></li>
+      <li><span>افتح الملف من الإشعارات أو من مجلد <b class="k">التنزيلات</b>.</span></li>
+      <li><span>إذا ظهرت رسالة «لا يُسمح بالتثبيت من هذا المصدر»، اضغط <b class="k">الإعدادات</b> وفعّل <b class="k">السماح من هذا المصدر</b>، ثم ارجع واضغط <b class="k">تثبيت</b>.</span></li>
+      <li><span>إذا ظهر تنبيه من Play Protect، اختر <b class="k">التثبيت على أي حال</b>.</span></li>
+    </ol>
+  </div>
+  <div class="box">
+    <h3>آمنة ومجانية</h3>
+    <ul>
+      <li>✅ كل الألعاب مجانية بالكامل.</li>
+      <li>🔒 لا تجمع أي بيانات، وتقدّمك محفوظ على جهازك فقط.</li>
+      <li>📱 تعمل على أندرويد 7 فما فوق، ويمكن لعبها من أي متصفح على الآيفون والكمبيوتر.</li>
+      <li>🔍 في صفحة كل لعبة بصمة SHA-256 للتحقق من أن الملف الذي حمّلته هو الملف الرسمي.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>© 2026 ألعاب حكيم</footer>
+</div>
+</body>
+</html>
