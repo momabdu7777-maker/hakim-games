@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hakeem-games.novixa.dev/sitemap.xml

@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- صورة المشاركة (Open Graph) لموقع ألعاب حكيم: 1200×630.
+     التوليد:  chromium --headless=new --window-size=1200,630 --hide-scrollbars \
+               --screenshot=og.png "file://$PWD/tools/og/og-card.html"   ثم تحويلها إلى og.jpg -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Tajawal;src:url(../../fonts/Tajawal-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:Tajawal;src:url(../../fonts/Tajawal-Bold.ttf);font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{
+  font-family:Tajawal,sans-serif;color:#f3f1ea;position:relative;
+  background:
+    radial-gradient(ellipse 60% 70% at 95% 0,rgba(46,196,214,.30),transparent 70%),
+    radial-gradient(ellipse 60% 70% at 0 0,rgba(124,58,237,.35),transparent 70%),
+    radial-gradient(ellipse 70% 60% at 30% 110%,rgba(242,193,78,.18),transparent 70%),
+    #0b1020;
+}
+.text{position:absolute;right:70px;top:84px;width:610px}
+h1{font-size:96px;font-weight:800;line-height:1.05}
+h1 span{background:linear-gradient(90deg,#f2c14e,#e0962b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:36px;font-weight:700;color:#d9dbe6;margin-top:18px;line-height:1.4}
+.games{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
+.games li{font-size:27px;font-weight:800;display:flex;align-items:center;gap:10px}
+.games li::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+.badge{display:inline-block;margin-top:34px;background:linear-gradient(180deg,#f2c14e,#e0962b);color:#241500;border-radius:999px;padding:8px 26px;font-size:28px;font-weight:800}
+.grid{position:absolute;left:80px;top:95px;display:grid;grid-template-columns:200px 200px;gap:24px;transform:rotate(-6deg)}
+.grid img{width:200px;height:200px;border-radius:44px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<div class="grid">
+  <img src="../../icons/sea-hunter.webp" alt=""><img src="../../icons/domino.webp" alt="">
+  <img src="../../icons/hakeem.webp" alt=""><img src="../../icons/hakim.webp" alt="">
+</div>
+<div class="text">
+  <h1>ألعاب <span>حكيم</span></h1>
+  <p class="lead">ألعاب عربية مجانية للجوال<br>حمّلها لأندرويد أو العبها من المتصفح</p>
+  <ul class="games">
+    <li style="--c:#2EC4D6">صياد البحر العربي</li>
+    <li style="--c:#1f9a62">دومينو حكيم</li>
+    <li style="--c:#a855f7">حكيم: تعلّم الإنجليزية</li>
+    <li style="--c:#d9a441">حكيم: أسئلة وألغاز</li>
+  </ul>
+  <span class="badge">4 ألعاب · مجانية بالكامل</span>
+</div>
+</body>
+</html>
